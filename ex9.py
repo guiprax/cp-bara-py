@@ -33,13 +33,13 @@ def obter_escolha_jogador():
             escolha = int(input("\nEscolha uma opção:\n[1] Pedra\n[2] Papel\n[3] Tesoura\n[4] Lagarto\n[5] Spock\n\nSua escolha: "))
             
             if escolha < 1 or escolha > 5:
-                print("❌ Opção inválida! Digite um número de 1 a 5.")
+                print(" Opção inválida! Digite um número de 1 a 5.")
                 continue
             
             return escolha
         
         except ValueError:
-            print("❌ Erro! Digite um número inteiro.")
+            print(" Erro! Digite um número inteiro.")
 
 # Função para determinar o resultado do jogo
 def determinar_resultado(jogador, computador):
@@ -72,14 +72,14 @@ def exibir_resultado(escolha_jogador, escolha_computador, resultado, derrotado, 
     print("=" * 50)
     
     if resultado == "empate":
-        print("🤝 Empate!")
+        print(" Empate!")
     elif resultado == "venceu":
         nome_derrotado = opcoes[derrotado]
-        print(f"✅ {nome_jogador} {acao} {nome_derrotado} — Você venceu!")
+        print(f" {nome_jogador} {acao} {nome_derrotado} — Você venceu!")
     elif resultado == "perdeu":
         nome_derrotado = opcoes[derrotado]
         nome_vencedor = opcoes[escolha_computador]
-        print(f"❌ {nome_vencedor} {acao} {nome_derrotado} — Computador venceu!")
+        print(f" {nome_vencedor} {acao} {nome_derrotado} — Computador venceu!")
     
     print("=" * 50)
 
@@ -106,7 +106,7 @@ def jogar():
         # Perguntar se quer jogar novamente
         continuar = input("\nDeseja jogar novamente? (sim/nao): ")
         if continuar.lower() != "sim":
-            print("\n🎮 Obrigado por jogar! Até logo!\n")
+            print("\n Obrigado por jogar! Até logo!\n")
             break
 
 # Executar o jogo
