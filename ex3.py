@@ -1,11 +1,10 @@
-# Cotações fixas para o exercício
 cotacoes = {
     "dolar": 5.15,
     "euro": 5.55,
     "libra": 6.45
 }
 
-# Função para realizar a conversão
+
 def converter_moeda(valor_reais, moeda):
     if valor_reais < 0:
         return "Valor inválido"
@@ -28,7 +27,7 @@ def converter_moeda(valor_reais, moeda):
     else:
         return "Opção inválida"
 
-# Menu principal
+
 while True:
     print("=" * 40)
     print("        CONVERSOR DE MOEDAS")
